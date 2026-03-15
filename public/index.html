@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>WhatsApp CRM</title>
+<style>
+body{font-family:Arial;margin:0}
+.container{display:flex;height:100vh}
+.contacts{width:30%;border-right:1px solid #ddd;padding:10px;overflow:auto}
+.chat{flex:1;padding:10px}
+.dark{background:#111;color:white}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="contacts">
+<h3>Contacts</h3>
+
+<input id="name" placeholder="Name">
+<input id="phone" placeholder="Phone">
+<button onclick="addContact()">Add</button>
+
+<h4>CSV Upload</h4>
+<input type="file" id="csvFile">
+<button onclick="uploadCSV()">Upload</button>
+
+<hr>
+
+<input id="search" placeholder="Search" onkeyup="searchContact()">
+
+<div id="contacts"></div>
+
+</div>
+
+<div class="chat">
+
+<h3 id="chatTitle">Chat</h3>
+
+<div id="chat"></div>
+
+<input id="msgText" placeholder="Type message">
+<button onclick="sendMsg()">Send</button>
+
+</div>
+
+</div>
+
+<button onclick="toggleDark()">Toggle Dark</button>
+
+<script src="app.js"></script>
+
+</body>
+</html>
