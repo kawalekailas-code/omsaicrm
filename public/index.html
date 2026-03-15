@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>WhatsApp CRM</title>
+
+<style>
+body{font-family:Arial}
+.container{display:flex;height:100vh}
+.sidebar{width:30%;border-right:1px solid #ccc;padding:10px}
+.main{flex:1;padding:10px}
+</style>
+
+</head>
+
+<body>
+
+<script>
+if(localStorage.getItem("login")!=="ok"){
+ location.href="/login.html"
+}
+</script>
+
+<h2>WhatsApp CRM Dashboard</h2>
+
+<div class="container">
+
+<div class="sidebar">
+
+<h3>Add Contact</h3>
+
+<input id="name" placeholder="Name">
+<input id="phone" placeholder="Phone">
+<button onclick="addContact()">Add</button>
+
+<h3>Contacts</h3>
+<div id="contacts"></div>
+
+</div>
+
+<div class="main">
+
+<h3>Templates</h3>
+<button onclick="loadTemplates()">Load Templates</button>
+<div id="templates"></div>
+
+<h3>Bulk Campaign</h3>
+
+Template Name:
+<input id="template"><br><br>
+
+Parameter 1:
+<input id="p1"><br>
+Parameter 2:
+<input id="p2"><br>
+Parameter 3:
+<input id="p3"><br>
+Parameter 4:
+<input id="p4"><br><br>
+
+<button onclick="sendCampaign()">Send Campaign</button>
+
+</div>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
