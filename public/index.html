@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CRM</title>
+<style>
+body{font-family:Arial;margin:0}
+.app{display:flex;height:100vh}
+.sidebar{width:35%;border-right:1px solid #ddd;padding:15px}
+.chat{flex:1;padding:20px;background:#e5ddd5}
+.preview{background:#fff;padding:10px;border-radius:10px;width:300px}
+</style>
+</head>
+<body>
+
+<div class="app">
+
+<div class="sidebar">
+
+<h3>Contacts</h3>
+<label><input type="checkbox" class="contactCheck" value="111"> Contact1</label><br>
+<label><input type="checkbox" class="contactCheck" value="222"> Contact2</label>
+
+<h3>Templates</h3>
+<select id="templateSelect"></select>
+
+<div id="templateParams"></div>
+
+<label>Header Media</label>
+<input type="file" id="headerMedia">
+<div id="mediaPreview"></div>
+
+<button onclick="bulkSend()">Send Template</button>
+
+</div>
+
+<div class="chat">
+
+<h3>Template Preview</h3>
+<div class="preview">
+<div id="previewBody"></div>
+<div id="previewFooter"></div>
+</div>
+
+</div>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
