@@ -20,7 +20,6 @@ app.use("/contacts",require("./routes/contacts"))
 app.use("/messages",require("./routes/messages"))
 app.use("/media",require("./routes/media"))
 app.use("/templates",require("./routes/templates"))
-app.use("/campaign",require("./routes/campaign"))
 app.use("/webhook",require("./routes/webhook"))
 
 app.listen(process.env.PORT||3000,()=>{
